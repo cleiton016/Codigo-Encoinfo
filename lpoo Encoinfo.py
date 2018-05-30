@@ -24,7 +24,7 @@ class Encoinfo:
     def __init__(self):
         self.inscritos=[]
     def atender(self,pessoa,inscricao,atendente):
-        if len(self.inscritos)<50:
+        if len(self.inscritos)<100:
             self.inscritos.append(Inscrito(pessoa,inscricao,atendente))
             atendente.total+=1
             if type(inscricao)==Inscricao_de_Aluno:
@@ -114,7 +114,7 @@ univercidade=['CEULP-ULBRA','FACTO','IFTO','ITOP']
 a=Inscricao_de_Aluno
 p=Inscricao_de_Professor
 op=[p,p,a,a,a,a,a,a,a,Inscricao_de_Profissional]
-for n in range(51):
+for n in range(101):
     p=Pessoa('José'+str(n))
     atendente=random.sample(atendentes,1)[0]
     inscricao=random.sample(op,1)[0]
